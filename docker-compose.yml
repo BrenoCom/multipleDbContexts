@@ -1,0 +1,19 @@
+version: '3.3'
+services:
+  SQLServer1:
+    image: mcr.microsoft.com/mssql/server:2022-CU16-ubuntu-22.04
+    environment:
+      SA_PASSWORD: "ChangeMe123"
+      ACCEPT_EULA: "Y"
+      MSSQL_PID: "Developer"
+    ports:
+      - "1433:1433"
+
+  SQLServer2:
+    image: mcr.microsoft.com/mssql/server:2022-CU16-ubuntu-22.04
+    environment:
+      SA_PASSWORD: "ChangeMe123"
+      ACCEPT_EULA: "Y"
+      MSSQL_PID: "Developer"
+    ports:
+      - "1434:1433"

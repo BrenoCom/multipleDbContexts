@@ -1,0 +1,89 @@
+CREATE DATABASE mySoftwareDB
+GO
+
+USE mySoftwareDB
+GO
+
+CREATE TABLE Company
+(
+	 idCompany INT NOT NULL IDENTITY(1,1) PRIMARY KEY
+	,name VARCHAR(200) NOT NULL
+	,serverERP VARCHAR(50) NOT NULL
+	,baseERP VARCHAR(50) NOT NULL
+	,codeERP VARCHAR(10) NOT NULL
+	,yearERP VARCHAR(10) NOT NULL
+	,hasIF BIT NOT NULL
+	,serverERPIF VARCHAR(50) NOT NULL
+	,baseERPIF VARCHAR(50) NOT NULL
+	,codeERPIF VARCHAR(10) NOT NULL
+	,yearERPIF VARCHAR(10) NOT NULL
+)
+GO
+
+CREATE TABLE status
+(
+	 idStatus INT NOT NULL PRIMARY KEY
+	,description VARCHAR(500) NOT NULL
+)
+GO
+
+INSERT INTO status
+(idStatus, description)
+VALUES
+ (1, 'ACTIVE')
+,(2, 'DELETED')
+GO
+
+CREATE TABLE SupplyerAditionalInfo
+(
+	 idSupplyerAditionalInfoInfo INT NOT NULL IDENTITY(1,1) PRIMARY KEY
+	,idStatus INT NOT NULL DEFAULT 1 FOREIGN KEY REFERENCES status(idStatus)
+	,TypeSupplyer VARCHAR(5) NOT NULL
+)
+GO
+
+CREATE TABLE InvoiceAditionalInfo
+(
+	 idInvoiceAditionalInfo INT NOT NULL IDENTITY(1,1) PRIMARY KEY
+	,idStatus INT NOT NULL DEFAULT 1 FOREIGN KEY REFERENCES status(idStatus)
+	,isIF BIT NOT NULL DEFAULT 0
+)
+GO
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
