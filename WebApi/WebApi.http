@@ -1,11 +1,11 @@
 @WebApi_HostAddress = http://localhost:5294
 
-GET {{WebApi_HostAddress}}/api/invoice?companyId=3&if=false
+GET {{WebApi_HostAddress}}/api/invoice?companyId=1&if=false
 Accept: application/json
 
 ###
 
-GET {{WebApi_HostAddress}}/api/supplyer?companyId=3&if=false
+GET {{WebApi_HostAddress}}/api/supplyer?companyId=1&if=false
 Accept: application/json
 
 ###
