@@ -1,8 +1,8 @@
 using Persistence.contexts.otherSoftware.Models;
 
-namespace Application.Features.Supplyer;
+namespace Application.Features.Supplier;
 
-public interface ISupplyerService
+public interface ISupplierService
 {
-    public Task<List<SupplyerOSModel>> List(int idCompany, bool isIF);
+    public Task<List<SupplierOSModel>> List(int idCompany, bool isIF);
 }
