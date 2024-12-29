@@ -2,10 +2,10 @@ using System.ComponentModel.DataAnnotations;
 
 namespace Persistence.contexts.mySoftware.Models;
 
-public class SupplyerAditionalInfoModel
+public class SupplierAditionalInfoModel
 {
     [Key]
-    public int idSupplyerAditionalInfoInfo { get; set; }
+    public int idSupplierAditionalInfoInfo { get; set; }
     public int idStatus { get; set; }
-    public string TypeSupplyer { get; set; } = string.Empty;
+    public string TypeSupplier { get; set; } = string.Empty;
 }
