@@ -1,6 +1,6 @@
 using Application.Features.Company;
 using Application.Features.Invoice;
-using Application.Features.Supplyer;
+using Application.Features.Supplier;
 using Carter;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
 using Microsoft.EntityFrameworkCore;
@@ -24,7 +24,7 @@ builder.Services.AddScoped<IOtherSoftwareDbContextCreator, OtherSoftwareDbContex
 
 
 builder.Services.AddScoped<IInvoiceService, InvoiceSercice>();
-builder.Services.AddScoped<ISupplyerService, SupplyerSercice>();
+builder.Services.AddScoped<ISupplierService, SupplierSercice>();
 builder.Services.AddScoped<ICompanyService, CompanySercice>();
 
 builder.Services.AddCarter();

@@ -5,7 +5,7 @@ Accept: application/json
 
 ###
 
-GET {{WebApi_HostAddress}}/api/supplyer?companyId=1&if=false
+GET {{WebApi_HostAddress}}/api/supplier?companyId=1&if=false
 Accept: application/json
 
 ###

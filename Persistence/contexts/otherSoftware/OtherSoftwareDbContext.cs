@@ -6,7 +6,7 @@ namespace Persistence.contexts.otherSoftware;
 public class OtherSoftwareDbContext : DbContext
 {
     public DbSet<InvoiceOSModel> Incoices { get; set; }
-    public DbSet<SupplyerOSModel> Supplyers { get; set; }
+    public DbSet<SupplierOSModel> Suppliers { get; set; }
 
 
 

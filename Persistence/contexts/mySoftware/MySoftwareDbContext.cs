@@ -17,7 +17,7 @@ public partial class MySoftwareDbContext : DbContext
 
     public virtual DbSet<CompanyModel> Company { get; set; }
     public virtual DbSet<StatusModel> Status { get; set; }
-    public virtual DbSet<SupplyerAditionalInfoModel> SupplyerAditionalInfo { get; set; }
+    public virtual DbSet<SupplierAditionalInfoModel> SupplierAditionalInfo { get; set; }
     public virtual DbSet<InvoiceAditionalInfoModel> InvoiceAditionalInfo { get; set; }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)

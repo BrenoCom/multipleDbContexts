@@ -56,7 +56,7 @@ public class OtherSoftwareDbContextModelConfiguration
         {
             SetTableName(entity, "PL03{CC}00");
         });
-        modelBuilder.Entity<SupplyerOSModel>(entity =>
+        modelBuilder.Entity<SupplierOSModel>(entity =>
         {
             SetTableName(entity, "PL01{CC}00");
         });

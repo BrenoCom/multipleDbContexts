@@ -34,11 +34,11 @@ VALUES
 ,(2, 'DELETED')
 GO
 
-CREATE TABLE SupplyerAditionalInfo
+CREATE TABLE SupplierAditionalInfo
 (
-	 idSupplyerAditionalInfoInfo INT NOT NULL IDENTITY(1,1) PRIMARY KEY
+	 idSupplierAditionalInfoInfo INT NOT NULL IDENTITY(1,1) PRIMARY KEY
 	,idStatus INT NOT NULL DEFAULT 1 FOREIGN KEY REFERENCES status(idStatus)
-	,TypeSupplyer VARCHAR(5) NOT NULL
+	,TypeSupplier VARCHAR(5) NOT NULL
 )
 GO
 

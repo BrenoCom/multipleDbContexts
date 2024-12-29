@@ -6,7 +6,7 @@ namespace Persistence.contexts.otherSoftware.Models;
 
 
 [Keyless]
-public class SupplyerOSModel
+public class SupplierOSModel
 {
 
     /// <value>Property <c>SupplierCode</c> represents the column PL01001 with the note Supplier Code</value>

@@ -57,7 +57,7 @@ END
 '
 
 EXEC SP_ExecuteSQL @SQL
-PRINT 'SUPPLYER TABLE CREATED'
+PRINT 'SUPPLIER TABLE CREATED'
 
 SET @SQL = '
 IF NOT EXISTS (SELECT 1 FROM '+@otherSoftwareDatabase+'.dbo.sysobjects WHERE name=''PL03'+@companyCode+'00'' and xtype=''U'')
