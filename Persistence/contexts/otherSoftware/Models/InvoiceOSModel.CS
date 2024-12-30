@@ -4,7 +4,8 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Persistence.contexts.otherSoftware.Models;
 
-[Keyless]
+// in my case i'll add 2 primary keys
+[PrimaryKey(nameof(SupplierCode), nameof(InvoiceNo))]
 public class InvoiceOSModel
 {
 

@@ -29,12 +29,12 @@ public class MultitenancySqlServerMigrationsSqlGenerator(
 
         bool IsDefaultSchema(string? schemaName)
         {
-            return schemaName == null || schemaName == defaultSchema;
+            return schemaName is null || schemaName == defaultSchema;
         }
 
         var schema = Dependencies.CurrentContext.Context.Model.GetDefaultSchema();
 
-        if (schema == null || schema == defaultSchema)
+        if (schema is null || schema == defaultSchema)
             return migrationOperations;
 
         foreach (var operation in migrationOperations)

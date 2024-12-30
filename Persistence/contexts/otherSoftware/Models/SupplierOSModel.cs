@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore;
 namespace Persistence.contexts.otherSoftware.Models;
 
 
-[Keyless]
+[PrimaryKey(nameof(SupplierCode))]
 public class SupplierOSModel
 {
 

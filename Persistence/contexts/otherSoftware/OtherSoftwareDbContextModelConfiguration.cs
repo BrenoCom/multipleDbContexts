@@ -1,4 +1,5 @@
 using System.Collections.Concurrent;
+using System.ComponentModel.DataAnnotations.Schema;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
@@ -45,9 +46,11 @@ public class OtherSoftwareDbContextModelConfiguration
         return model;
     }
 
-    private void SetTableName(EntityTypeBuilder entity, string tableName)
+    private string SetTableName(EntityTypeBuilder entity, string tableName)
     {
-        entity.ToTable(tableName.Replace("{CC}", _companyCode).Replace("{CY}", _companyYear));
+        var table = tableName.Replace("{CC}", _companyCode).Replace("{CY}", _companyYear);
+        entity.ToTable(table);
+        return table;
     }
 
     private void ConfigureModel(ModelBuilder modelBuilder)
@@ -58,7 +61,7 @@ public class OtherSoftwareDbContextModelConfiguration
         });
         modelBuilder.Entity<SupplierOSModel>(entity =>
         {
-            SetTableName(entity, "PL01{CC}00");
+            var tableName = SetTableName(entity, "PL01{CC}00");
         });
         /* // Configure Customer entity
         modelBuilder.Entity<Customer>(entity =>

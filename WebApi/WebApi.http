@@ -5,10 +5,125 @@ Accept: application/json
 
 ###
 
+POST {{WebApi_HostAddress}}/api/invoice?companyId=1&if=false
+Accept: application/json
+Content-Type: application/json
+
+{
+    "supplierCode": "0000000001",
+    "invoiceNo": "9999999",
+    "transactioNo": "1223456",
+    "invoiceDate": "2024-12-19T00:00:00",
+    "bookEntrDate": "2025-01-10T00:00:00",
+    "dueDate": "2025-01-01T00:00:00"
+}
+
+###
+
+PUT {{WebApi_HostAddress}}/api/invoice?companyId=1&if=false
+Accept: application/json
+Content-Type: application/json
+
+{
+    "supplierCode": "0000000005",
+    "invoiceNo": "4568465464",
+    "transactioNo": "2222",
+    "invoiceDate": "2024-12-19T00:00:00",
+    "bookEntrDate": "2025-01-10T00:00:00",
+    "dueDate": "2025-01-01T00:00:00"
+}
+
+###
+
+DELETE {{WebApi_HostAddress}}/api/invoice/0000000001/9999999?companyId=1&if=false
+Accept: application/json
+
+###
+
 GET {{WebApi_HostAddress}}/api/supplier?companyId=1&if=false
+Accept: application/json
+
+###
+
+POST {{WebApi_HostAddress}}/api/supplier?companyId=1&if=false
+Accept: application/json
+Content-Type: application/json
+
+{
+    "supplierCode": null,
+    "supplierName": "Diogo e Priscila Consultoria Financeira ME                                                                                                                                                              ",
+    "addressLine1": "Rua Mariópolis                                                                                      ",
+    "addressLine2": "Vila Carioca                                                                                        ",
+    "addressLine3": "Guarulhos                                                                                           "
+  }
+
+###
+
+PUT {{WebApi_HostAddress}}/api/supplier?companyId=1&if=false
+Accept: application/json
+Content-Type: application/json
+
+{
+  "supplierCode": "0000000028",
+  "supplierName": "Diogo e Priscila Consultoria Financeira ME                                                                                                                                                              ",
+  "addressLine1": "teste teste                                                                                      ",
+  "addressLine2": "Vila Carioca                                                                                        ",
+  "addressLine3": "Guarulhos                                                                                           "
+}
+
+###
+
+DELETE {{WebApi_HostAddress}}/api/supplier/0000000029?companyId=1&if=false
 Accept: application/json
 
 ###
 
 GET {{WebApi_HostAddress}}/api/company
 Accept: application/json
+
+###
+
+POST {{WebApi_HostAddress}}/api/company
+Accept: application/json
+Content-Type: application/json
+
+{
+    "idCompany": 0,
+    "name": "MY COMPANY Test",
+    "serverERP": "127.0.0.1,1433",
+    "baseERP": "otherSoftwareBRDB",
+    "codeERP": "B1",
+    "yearERP": "24",
+    "hasIF": false,
+    "serverERPIF": "127.0.0.1,1433",
+    "baseERPIF": "otherSoftwareBRDB",
+    "codeERPIF": "BZ",
+    "yearERPIF": "24"
+}
+
+###
+
+
+PUT {{WebApi_HostAddress}}/api/company
+Accept: application/json
+Content-Type: application/json
+
+{
+    "idCompany": 3,
+    "name": "MY COMPANY",
+    "serverERP": "127.0.0.1,1434",
+    "baseERP": "otherSoftwareBRDB",
+    "codeERP": "B2",
+    "yearERP": "24",
+    "hasIF": false,
+    "serverERPIF": "",
+    "baseERPIF": "",
+    "codeERPIF": "",
+    "yearERPIF": ""
+}
+###
+
+DELETE {{WebApi_HostAddress}}/api/company/9
+Accept: application/json
+
+###

@@ -13,11 +13,11 @@ public static class ModelBuildingHelper
 
     public static ConventionSet GetSqlServerConventionSet()
     {
-        if (_sqlServerConventionSet == null)
+        if (_sqlServerConventionSet is null)
         {
             lock (_lock)
             {
-                if (_sqlServerConventionSet == null)
+                if (_sqlServerConventionSet is null)
                 {
                     var serviceProvider = new ServiceCollection()
                         .AddSqlServer<DbContext>("no-connection")
